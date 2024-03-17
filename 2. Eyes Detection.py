@@ -4,35 +4,6 @@ import pyttsx3
 import bz2
 from scipy.spatial import distance
 
-
-# # SETTING UP OF CAMERA TO 1 YOU
-# # CAN EVEN CHOOSE 0 IN PLACE OF 1
-# cap = cv2.VideoCapture(0)  # Change the camera index if necessary
-
-# # MAIN LOOP IT WILL RUN ALL THE UNLESS
-# # AND UNTIL THE PROGRAM IS BEING KILLED
-# # BY THE USER
-# while True:
-#     ret, frame = cap.read()
-    
-#     # Check if frame is not empty
-#     if not ret:
-#         print("Error: Couldn't read frame from the camera")
-#         break
-
-#     gray_scale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-#     cv2.imshow("Drowsiness DETECTOR IN OPENCV2", gray_scale)
-#     key = cv2.waitKey(1) & 0xFF  # Use bitwise AND to get only the last 8 bits
-
-#     # Check if the 'q' key is pressed
-#     if key == ord("q"):
-#         break
-
-# # Release the camera and close all OpenCV windows
-# cap.release()
-# cv2.destroyAllWindows()
-
 # Specify the path to your .bz2 file
 bz2_file_path = "C:/Users/SATYAM KUMAR/Desktop/shape_predictor_68_face_landmarks.dat.bz2"
 # Specify the path where you want to save the extracted .dat file
@@ -59,10 +30,6 @@ cap = cv2.VideoCapture(0)
 # FACE DETECTION OR MAPPING THE FACE 
 # TO GET THE Eye AND EYES DETECTED
 face_detector = dlib.get_frontal_face_detector()
-
-# PUT THE LOCATION OF .DAT FILE (FILE 
-# FOR PREDECTING THE LANDMARKS ON FACE )
-#dlib_facelandmark = dlib.shape_predictor("C:/Users/SATYAM KUMAR/Desktop/shape_predictor_68_face_landmarks.dat.bz2")
 
 # FUNCTION CALCULATING THE ASPECT RATIO 
 # FOR THE Eye BY USING EUCLIDEAN DISTANCE 
