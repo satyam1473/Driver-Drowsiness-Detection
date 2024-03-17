@@ -52,10 +52,7 @@ def Detect_Eye(eye):
 # UNTIL THE PROGRAM IS BEING KILLED BY THE USER
 while True:
     null, frame = cap.read()
-    # if not ret:
-    #     print("Error: Failed to retrieve frame")
-    #     break
-
+    
     gray_scale = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
 
     faces = face_detector(gray_scale)
